@@ -2,16 +2,16 @@
 
 **FLIX** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 
 The following **required** user stories are complete:
 
-- [ ] User sees app icon in home screen and styled launch screen (+1pt)
-- [ ] User can scroll through a list of movies currently playing in theaters from The Movie DB API (+5pt)
-- [ ] User can "Pull to refresh" the movie list (+2pt)
-- [ ] User sees a loading state while waiting for the movies to load (+2pt)
+- [x] User sees app icon in home screen and styled launch screen (+1pt)
+- [x] User can scroll through a list of movies currently playing in theaters from The Movie DB API (+5pt)
+- [x ] User can "Pull to refresh" the movie list (+2pt)
+- [ x] User sees a loading state while waiting for the movies to load (+2pt)
 
 The following **stretch** user stories are implemented:
 
@@ -25,27 +25,30 @@ The following **stretch** user stories are implemented:
 The following **additional** user stories are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality! (+1-3pts)
+- You could click on the desired movie and the whole text could be desplayed as well as the poster and maybe more imformation related to the movie.
+- We could also add different tap gestures so if you were to tap on a cell right now you select it but nothing happens but we could add with a second tap to deselect it.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. Adding various screens to the main Story board (navigator, view controller, another view after interaction with the first view)
+2. In my cs courses we designed objects and then in the view controller we would just call them so an interesting topic is whether the cell could be a different class and in the view controller we would just desplay its features.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/Nbo0ua5' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+It is a constant difficulty to have a set layout and some structures look better in specific environments.
+Further the activity indicator must not be on top of the cells because that would replicate it for each cell which is an illegal move.  
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2018 Ioanna Deni
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
