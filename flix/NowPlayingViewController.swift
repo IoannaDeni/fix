@@ -10,16 +10,31 @@ import UIKit
 import AlamofireImage
 
 
-class NowPlayingViewController: UIViewController, UITableViewDataSource{
+class NowPlayingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     var movies: [[String: Any]] = []
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        activityIndicator.startAnimating()
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(NowPlayingViewController.userRefreshed(_:)), for: .valueChanged)
+        tableView.addSubview(activityIndicator)
+        tableView.insertSubview(refreshControl, at: 0)
         tableView.rowHeight = 240
         tableView.dataSource = self
+        fetchMovies()
+        activityIndicator.stopAnimating()
+    }
+    
+    @objc func userRefreshed(_ refreshControl: UIRefreshControl){
+        fetchMovies()
+    }
+    
+    func fetchMovies() {
         
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -42,6 +57,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource{
                 let movies = dataDictionary!["results"] as! [[String: Any]]
                 self.movies = movies
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
         }
         
@@ -53,6 +69,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
         
         let movie = movies[indexPath.row]
