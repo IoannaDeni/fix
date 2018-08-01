@@ -57,6 +57,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
                 }
                 let movies = dataDictionary!["results"] as! [[String: Any]]
                 self.movies = movies
+                self.tableView.rowHeight = UITableViewAutomaticDimension
+                self.tableView.estimatedRowHeight = 240;
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
             }

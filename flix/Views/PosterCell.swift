@@ -12,4 +12,16 @@ class PosterCell: UICollectionViewCell {
     
     @IBOutlet weak var posterImageView: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        self.contentView.translatesAutoresizingMaskIntoConstraints=false
+        posterImageView.clipsToBounds = true
+    
+    }
+    override func  layoutSubviews() {
+        super.layoutSubviews()
+        posterImageView.clipsToBounds = true
+        
+    }
 }

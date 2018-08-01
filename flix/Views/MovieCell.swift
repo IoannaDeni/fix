@@ -18,11 +18,19 @@ class MovieCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        //titleLabel.preferredMaxLayoutWidth = titleLabel.frame.size.width
+        titleLabel.preferredMaxLayoutWidth = titleLabel.frame.size.width
+        overviewLabel.preferredMaxLayoutWidth = overviewLabel.frame.size.width
+        posterImageView.clipsToBounds = true
+        titleLabel.clipsToBounds = true
+        overviewLabel.clipsToBounds = true
     }
     override func  layoutSubviews() {
         super.layoutSubviews()
         titleLabel.preferredMaxLayoutWidth = titleLabel.frame.size.width
+        overviewLabel.preferredMaxLayoutWidth = overviewLabel.frame.size.width
+        posterImageView.clipsToBounds = true
+        titleLabel.clipsToBounds = true
+        overviewLabel.clipsToBounds = true
         
     }
 

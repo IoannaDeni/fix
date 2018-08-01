@@ -18,19 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="sJl-bZ-4kO">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="sJl-bZ-4kO">
                                 <rect key="frame" x="91" y="162" width="138" height="139"/>
-                                <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FLIX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eot-NE-fBE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eot-NE-fBE">
                                 <rect key="frame" x="130" y="309" width="60" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eot-NE-fBE" secondAttribute="trailing" constant="130" id="UJ9-ML-VeK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sJl-bZ-4kO" secondAttribute="trailing" constant="91" id="VXE-aH-yJF"/>
+                            <constraint firstItem="Eot-NE-fBE" firstAttribute="top" secondItem="sJl-bZ-4kO" secondAttribute="bottom" constant="8" id="WAS-Hd-Pab"/>
+                            <constraint firstItem="Eot-NE-fBE" firstAttribute="top" secondItem="sJl-bZ-4kO" secondAttribute="bottom" constant="8" id="ZzA-c1-8Y1"/>
+                            <constraint firstItem="Eot-NE-fBE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="dDa-AV-I6V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Eot-NE-fBE" secondAttribute="bottom" constant="219" id="o1M-2n-2BT"/>
+                            <constraint firstItem="sJl-bZ-4kO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="uk2-Xq-atE"/>
+                            <constraint firstItem="sJl-bZ-4kO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="142" id="yH5-3S-o6v"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
